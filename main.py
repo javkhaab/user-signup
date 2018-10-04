@@ -101,15 +101,17 @@ def validation():
         username_error = 'Not a valid username'
         username = ''
 
-    if not password == verify:
-        password_error = "Passwords don't match"
-        password = ''
-        verify = ''
+    
 
-    if password == "" or verify == "":
+    if password == "":
         empty_password = "Enter your password!"
         password = ''
         verify = ''
+    else: 
+        if not password == verify:
+            password_error = "Passwords don't match"
+            password = ''
+            verify = ''
 
     
     if not email_error and not username_error and not password_error and not empty_password:
