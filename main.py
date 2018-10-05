@@ -93,6 +93,7 @@ def validation():
     empty_password=''
 
     if isValidEmail(email) == False or email == "":
+        
         email_error = 'Not a valid email'
         email = ''
         
@@ -103,7 +104,7 @@ def validation():
 
     
 
-    if password == "":
+    if usernameValidation(password) == False or password == "":
         empty_password = "Enter your password!"
         password = ''
         verify = ''
