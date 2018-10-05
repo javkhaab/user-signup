@@ -105,7 +105,7 @@ def validation():
     
 
     if usernameValidation(password) == False or password == "":
-        empty_password = "Enter your password!"
+        empty_password = "Not a valid password!"
         password = ''
         verify = ''
     else: 
