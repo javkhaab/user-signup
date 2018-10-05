@@ -92,10 +92,11 @@ def validation():
     email_error=''
     empty_password=''
 
-    if isValidEmail(email) == False or email == "":
+    if not email == "":
+        if isValidEmail(email) == False:
         
-        email_error = 'Not a valid email'
-        email = ''
+            email_error = 'Not a valid email'
+            email = ''
         
 
     if usernameValidation(username) == False or username == "":
